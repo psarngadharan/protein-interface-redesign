@@ -15,6 +15,6 @@ jobs:
     
     - name: Run GROMACS simulation script
       run: |
-      ls -l
-      ls -R .
+        ls -l
+        gmx pdb2gmx -help
 
