@@ -16,7 +16,9 @@ jobs:
     - name: Run GROMACS simulation script
       run: |
         ls -l
-        gmx_mpi pdb2gmx -h
-        chmod +x ./scripts/gmx.sh
-        ./scripts/gmx.sh
+        cd scripts
+        ls -l
+        chmod +x ./gmx.sh
+        ls -l
+        ./gmx.sh
 
