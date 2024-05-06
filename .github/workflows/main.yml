@@ -15,36 +15,35 @@ jobs:
     
     - name: Run GROMACS simulation script
       run: |
-        cd scripts
-        chmod +x ./gmx.sh
-        ./gmx.sh
+        chmod +x ./scripts/gmx.sh
+        ./scripts/gmx.sh
     - name: Archive code coverage results
-        uses: actions/upload-artifact@v4
-        with:
-          name: ions
-          path: ./results/ions.gro
+      uses: actions/upload-artifact@v4
+      with:
+        name: ions
+        path: ./results/ions.gro
           
     - name: Archive code coverage results
-        uses: actions/upload-artifact@v4
-        with:
-          name: em
-          path: ./results/em.gro
+      uses: actions/upload-artifact@v4
+      with:
+        name: em
+        path: ./results/em.gro
           
     - name: Archive code coverage results
-        uses: actions/upload-artifact@v4
-        with:
-          name: nvt
-          path: ./results/nvt.gro
+      uses: actions/upload-artifact@v4
+      with:
+        name: nvt
+        path: ./results/nvt.gro
 
     - name: Archive code coverage results
-        uses: actions/upload-artifact@v4
-        with:
-          name: npt
-          path: ./results/npt.gro
+      uses: actions/upload-artifact@v4
+      with:
+        name: npt
+        path: ./results/npt.gro
           
     - name: Archive code coverage results
-        uses: actions/upload-artifact@v4
-        with:
-          name: md
-          path: ./results/md.gro
+      uses: actions/upload-artifact@v4
+      with:
+        name: md
+        path: ./results/md.gro
 
