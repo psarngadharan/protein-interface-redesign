@@ -1,5 +1,5 @@
 #! /bin/bash
-echo 3 6 | gmx pdb2gmx -f name.pdb -o name_processed.gro
+echo 3 6 | gmx pdb2gmx -f 6M0J_fixed.pdb -o name_processed.gro
 gmx editconf -f name_processed.gro -o name_newbox.gro -c -d 1.0 -bt cubic
 gmx solvate -cp name_newbox.gro -cs spc216.gro -o name_solv.gro -p topol.top
 gmx grompp -f ions.mdp -c name_solv.gro -p topol.top -o ions.tpr
